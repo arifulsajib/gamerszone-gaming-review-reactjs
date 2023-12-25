@@ -9,8 +9,8 @@ Users will able to:
 
 ### Links
 
-- Live Site: [GamersZone](https://arifulsajib.github.io/)
-- Code: [Github](https://github.com/arifulsajib/)
+- Live Site: [GamersZone](https://gamerszone-arifulsajib.netlify.app/)
+- Code: [Github](https://github.com/arifulsajib/gamerszone-gaming-review-reactjs)
 
 ### Built with
 
