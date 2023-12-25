@@ -1,8 +1,12 @@
+import HomeBanner from "../../Components/HomePage/HomeBanner/HomeBanner";
+import PopularGames from "../../Components/HomePage/PopularGames/PopularGames";
+
 const HomePage = () => {
   return (
-    <section className="container">
-      <h1>homepages</h1>
-    </section>
+    <>
+      <HomeBanner></HomeBanner>
+      <PopularGames></PopularGames>
+    </>
   );
 };
 

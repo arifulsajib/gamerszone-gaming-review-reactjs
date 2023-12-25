@@ -6,15 +6,15 @@ import logo from "../../../assets/logo.png";
 
 const Header = () => {
   return (
-    <section className="mb-3">
-      <Navbar className="bg-darkblue" expand="lg">
-        <Container>
-          <Navbar.Brand as={HashLink} smooth to="#banner">
+    <section>
+      <Navbar className="bg-darkblue" expand="lg" fixed="top">
+        <Container fluid>
+          <Navbar.Brand as={HashLink} smooth to="#banner" className="ms-3">
             <img src={logo} alt="Brand" width="240" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto fw-semibold fs-5">
+            <Nav className="mx-auto fw-semibold fs-5">
               <Nav.Link as={NavLink} className="text-white mx-2" to="/">
                 Home
               </Nav.Link>
@@ -28,6 +28,9 @@ const Header = () => {
                 Games
               </Nav.Link>
             </Nav>
+            <Nav.Link as={HashLink} className="text-white me-3 fw-semibold fs-5" smooth to="#footer">
+              Content
+            </Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>

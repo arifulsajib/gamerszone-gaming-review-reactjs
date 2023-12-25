@@ -1,5 +1,41 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #07051b !important;
+}
+
+/* Common style */
+.fs-7 {
+  font-size: 0.9rem;
+}
+.fs-0 {
+  font-size: 50px;
+  letter-spacing: 0.06em;
+  word-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.sm-fs-0 {
+  font-size: 45px;
+  letter-spacing: 0.06em;
+  word-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.bg-glass {
+  background: rgba(30, 68, 131, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+}
+
 .bg-darkblue {
   background-color: #100e2b;
+}
+.bg-blue {
+  background-color: #07051b;
 }
 .bg-paste {
   background-color: #009f9d;
@@ -16,4 +52,13 @@
 }
 .text-lightwhite {
   color: #f4f0f0;
+}
+
+.btn-paste {
+  background-color: #009f9d;
+  border: 0;
+  padding: 1% 5%;
+  letter-spacing: 0.1em;
+  color: white;
+  text-transform: uppercase;
 }

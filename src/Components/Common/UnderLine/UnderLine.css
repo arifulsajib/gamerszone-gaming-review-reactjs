@@ -1,0 +1,27 @@
+.line {
+  margin-top: 16px;
+  height: 6px;
+  width: 160px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #009f9d;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  right: -6px;
+  border-left: 6px solid #009f9d;
+  border-bottom: 3.5px solid transparent;
+  border-top: 3.5px solid transparent;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  border-right: 6px solid #009f9d;
+  border-bottom: 3.5px solid transparent;
+  border-top: 3.5px solid transparent;
+}

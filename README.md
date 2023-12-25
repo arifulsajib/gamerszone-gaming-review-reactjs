@@ -14,10 +14,10 @@ Users will able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS3
-- Bootstrap
-- Javascript ES6
+- React
+- Redux-toolkit
+- RTK query
+- bootstrap
 
 ## Developer profile
 
