@@ -2,11 +2,16 @@ import { Button, Card, Col } from "react-bootstrap";
 import StarRating from "../StarRating/StarRating";
 import { BsStar } from "react-icons/bs";
 import { Game } from "../../../models/game.model";
+import { useNavigate } from "react-router";
 interface Props {
   game: Game;
 }
 
 const DynamicGame = ({ game }: Props) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/games/${game.id}`);
+  };
   return (
     <>
       <Col className="d-flex align-items-stretch">
@@ -37,7 +42,9 @@ const DynamicGame = ({ game }: Props) => {
                 <span className="mb-0 fs-7 d-block">Updated: {game?.updated.slice(0, 10)}</span>
               </span>
               <span className="mt-auto mb-2">
-                <Button variant="outline-info mx-3 text-nowrap ">SEE MORE</Button>
+                <Button variant="outline-info mx-3 text-nowrap " onClick={handleClick}>
+                  SEE MORE
+                </Button>
               </span>
             </Card.Text>
           </Card.Body>

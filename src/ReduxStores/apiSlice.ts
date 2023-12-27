@@ -3,9 +3,15 @@ import { Game } from "../models/game.model";
 import { apiKey } from "../Api/apiKey";
 import { Genre } from "../models/genre.model";
 import { Store } from "../models/store.model";
+import { Creator } from "../models/creator.model";
+import { GameInfo } from "../models/gameInfo.model";
+
+// https://api.rawg.io/api/games/3498?key=2f7b169ad3574b86bc34505e89cf9187
 
 interface Games {
   results: Game[];
+  next: string | null;
+  previous: string | null;
 }
 interface Genres {
   results: Genre[];
@@ -13,6 +19,12 @@ interface Genres {
 
 interface Stores {
   results: Store[];
+}
+
+interface Creators {
+  results: Creator[];
+  next: string | null;
+  previous: string | null;
 }
 
 export const gamesApi = createApi({
@@ -25,13 +37,19 @@ export const gamesApi = createApi({
     getGamesByGenre: buider.query<Games, { genre: string; pageNo: number; pageSize: number }>({
       query: ({ pageNo, pageSize, genre }) => `games?key=${apiKey}&genres=${genre}&page=${pageNo}&page_size=${pageSize}`
     }),
+    getGameInfo: buider.query<GameInfo, string | undefined>({
+      query: (number) => `games/${number}?key=${apiKey}`
+    }),
     getGenre: buider.query<Genres, { pageNo: number; pageSize: number }>({
       query: ({ pageNo, pageSize }) => `genres?key=${apiKey}&page=${pageNo}&page_size=${pageSize}`
     }),
     getStores: buider.query<Stores, void>({
       query: () => `stores?key=${apiKey}`
+    }),
+    getCreators: buider.query<Creators, { pageNo: number; pageSize: number }>({
+      query: ({ pageNo, pageSize }) => `creators?key=${apiKey}&page=${pageNo}&page_size=${pageSize}`
     })
   })
 });
 
-export const { useGetGamesQuery, useGetGamesByGenreQuery, useGetGenreQuery, useGetStoresQuery } = gamesApi;
+export const { useGetGamesQuery, useGetGamesByGenreQuery, useGetGenreQuery, useGetStoresQuery, useGetCreatorsQuery, useGetGameInfoQuery } = gamesApi;

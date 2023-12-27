@@ -3,10 +3,16 @@ import UnderLine from "../../Common/UnderLine/UnderLine";
 import DynamicGame from "../../Common/DynamicGame/DynamicGame";
 import { useGetGamesQuery } from "../../../ReduxStores/apiSlice";
 import Spinner from "../../Common/Spinner/Spinner";
+import { useNavigate } from "react-router";
 
 const PopularGames = () => {
   const { data, isLoading } = useGetGamesQuery({ pageNo: 1, pageSize: 9 });
   const games = data?.results;
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/games/`);
+  };
 
   return (
     <section className="container bg-blue my-4">
@@ -23,7 +29,9 @@ const PopularGames = () => {
         ))}
       </Row>
       <div className="text-center mt-3">
-        <button className="btn-paste fw-semibold fs-6">SEE MORE GAMES</button>
+        <button className="btn-paste fw-semibold fs-6" onClick={handleClick}>
+          SEE MORE GAMES
+        </button>
       </div>
     </section>
   );
