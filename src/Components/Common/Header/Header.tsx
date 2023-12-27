@@ -3,11 +3,12 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../assets/logo.png";
+import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 
 const Header = () => {
   return (
     <section className="header">
-      <Navbar className="bg-darkblue" expand="lg" fixed="top">
+      <Navbar className="bg-darkblue navbar" expand="lg" fixed="top">
         <Container fluid>
           <Navbar.Brand as={HashLink} smooth to="#banner" className="ms-3">
             <img src={logo} alt="Brand" width="240" />
@@ -34,6 +35,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <BreadCrumbs></BreadCrumbs>
     </section>
   );
 };
