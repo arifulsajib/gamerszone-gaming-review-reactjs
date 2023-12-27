@@ -7,6 +7,7 @@ import CreatorsPage from "./Pages/CreatorsPage/CreatorsPage";
 import StoresPage from "./Pages/StoresPage/StoresPage";
 import GamesPage from "./Pages/GamesPage/GamesPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import Footer from "./Components/Common/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/games" element={<GamesPage></GamesPage>}></Route>
           <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
         </Routes>
+        <Footer></Footer>
       </Router>
     </>
   );

@@ -1,8 +1,13 @@
 import { Row } from "react-bootstrap";
 import UnderLine from "../../Common/UnderLine/UnderLine";
 import DynamicGame from "../../Common/DynamicGame/DynamicGame";
+import { useGetGamesQuery } from "../../../ReduxStores/apiSlice";
+import Spinner from "../../Common/Spinner/Spinner";
 
 const PopularGames = () => {
+  const { data, isLoading } = useGetGamesQuery({ pageNo: 1, pageSize: 9 });
+  const games = data?.results;
+
   return (
     <section className="container bg-blue my-4">
       <div className="pb-4">
@@ -12,12 +17,10 @@ const PopularGames = () => {
         <UnderLine></UnderLine>
       </div>
       <Row xs={1} md={2} lg={3} className="g-4">
-        <DynamicGame></DynamicGame>
-        <DynamicGame></DynamicGame>
-        <DynamicGame></DynamicGame>
-        <DynamicGame></DynamicGame>
-        <DynamicGame></DynamicGame>
-        <DynamicGame></DynamicGame>
+        {isLoading && <Spinner></Spinner>}
+        {games?.map((game) => (
+          <DynamicGame key={game.id} game={game}></DynamicGame>
+        ))}
       </Row>
       <div className="text-center mt-3">
         <button className="btn-paste fw-semibold fs-6">SEE MORE GAMES</button>

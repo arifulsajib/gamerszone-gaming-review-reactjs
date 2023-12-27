@@ -6,7 +6,7 @@ import logo from "../../../assets/logo.png";
 
 const Header = () => {
   return (
-    <section>
+    <section className="header">
       <Navbar className="bg-darkblue" expand="lg" fixed="top">
         <Container fluid>
           <Navbar.Brand as={HashLink} smooth to="#banner" className="ms-3">
