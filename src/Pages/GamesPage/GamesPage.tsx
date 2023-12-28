@@ -5,6 +5,7 @@ import Spinner from "../../Components/Common/Spinner/Spinner";
 import DynamicGame from "../../Components/Common/DynamicGame/DynamicGame";
 import Pagination from "../../Components/Common/Pagination/Pagination";
 import { useState } from "react";
+import { JackInTheBox } from "react-awesome-reveal";
 
 const GamesPage = () => {
   const [pageNo, setPageNo] = useState(1);
@@ -19,9 +20,11 @@ const GamesPage = () => {
         minHeight: "450px"
       }}
     >
-      <h1 className="text-center fw-bold ">
-        ALL <span className="text-pink">GAMES</span>
-      </h1>
+      <JackInTheBox>
+        <h1 className="text-center fw-bold ">
+          ALL <span className="text-pink">GAMES</span>
+        </h1>
+      </JackInTheBox>
       <UnderLine></UnderLine>
       <Row xs={1} md={2} lg={3} className="g-4 my-3">
         {isFetching ? <Spinner></Spinner> : games?.map((game) => <DynamicGame key={game.id} game={game}></DynamicGame>)}

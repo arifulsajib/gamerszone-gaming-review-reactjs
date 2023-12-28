@@ -19,7 +19,7 @@ const BreadCrumbs = () => {
     });
   return (
     <>
-      {location.pathname !== "/" && (
+      {location.pathname !== "/" && location.pathname !== "/home" && (
         <div className="d-flex my-2 breadcrumbs mt-4 container-fluid">
           <NavLink to="/" className="crumb text-decoration-none mx-2 text-white mt-5">
             Home

@@ -4,6 +4,7 @@ import DynamicGame from "../../Common/DynamicGame/DynamicGame";
 import { useGetGamesQuery } from "../../../ReduxStores/apiSlice";
 import Spinner from "../../Common/Spinner/Spinner";
 import { useNavigate } from "react-router";
+import { JackInTheBox, Zoom } from "react-awesome-reveal";
 
 const PopularGames = () => {
   const { data, isLoading } = useGetGamesQuery({ pageNo: 1, pageSize: 9 });
@@ -17,9 +18,11 @@ const PopularGames = () => {
   return (
     <section className="container bg-blue my-4">
       <div className="pb-4">
-        <h1 className="text-center pt-4 fs-1 fw-bold text-white">
-          TOP POPULAR <span className="text-pink">GAMES</span>
-        </h1>
+        <JackInTheBox>
+          <h1 className="text-center pt-4 fs-1 fw-bold text-white">
+            TOP POPULAR <span className="text-pink">GAMES</span>
+          </h1>
+        </JackInTheBox>
         <UnderLine></UnderLine>
       </div>
       <Row xs={1} md={2} lg={3} className="g-4">
@@ -29,9 +32,11 @@ const PopularGames = () => {
         ))}
       </Row>
       <div className="text-center mt-3">
-        <button className="btn-paste fw-semibold fs-6" onClick={handleClick}>
-          SEE MORE GAMES
-        </button>
+        <Zoom>
+          <button className="btn-paste fw-semibold fs-6" onClick={handleClick}>
+            SEE MORE GAMES
+          </button>
+        </Zoom>
       </div>
     </section>
   );

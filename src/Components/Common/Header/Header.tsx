@@ -11,7 +11,7 @@ const Header = () => {
     <section className="header">
       <Navbar className="bg-darkblue navbar" expand="lg" fixed="top">
         <Container fluid>
-          <Navbar.Brand as={HashLink} smooth to="#banner" className="ms-3">
+          <Navbar.Brand as={HashLink} smooth to="/#banner" className="ms-3">
             <img src={logo} alt="Brand" width="240" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark" />

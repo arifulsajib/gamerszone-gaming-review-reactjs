@@ -6,6 +6,7 @@ import Spinner from "../../Components/Common/Spinner/Spinner";
 import DynamicCreator from "../../Components/Common/DynamicCreator/DynamicCreator";
 import Pagination from "../../Components/Common/Pagination/Pagination";
 import { Creator } from "../../models/creator.model";
+import { JackInTheBox } from "react-awesome-reveal";
 
 const CreatorsPage = () => {
   const [pageNo, setPageNo] = useState(1);
@@ -19,9 +20,11 @@ const CreatorsPage = () => {
         minHeight: "450px"
       }}
     >
-      <h1 className="text-center fw-bold ">
-        ALL <span className="text-pink">CREATORS</span>
-      </h1>
+      <JackInTheBox>
+        <h1 className="text-center fw-bold ">
+          ALL <span className="text-pink">CREATORS</span>
+        </h1>
+      </JackInTheBox>
       <UnderLine></UnderLine>
       <Row xs={1} md={2} lg={3} className="g-5 mt-5 mb-3">
         {isFetching ? <Spinner></Spinner> : creators?.map((creator: Creator) => <DynamicCreator key={creator.id} creator={creator}></DynamicCreator>)}

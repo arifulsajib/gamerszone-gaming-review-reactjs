@@ -1,5 +1,6 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import bannerImg from "../../../assets/banner.png";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const HomeBanner = () => {
   return (
@@ -16,19 +17,27 @@ const HomeBanner = () => {
           <Col md={6}>
             <button className="btn-paste fs-4 fw-semibold">Join Streaming</button>
             <div className="d-none d-md-block my-4">
-              <h1 className="fs-0 mb-0 ">BEST ONLINE</h1>
-              <h1 className="fs-0 mt-0 ">GAME TO PLAY</h1>
+              <Zoom cascade>
+                <h1 className="fs-0 mb-0 ">BEST ONLINE</h1>
+                <h1 className="fs-0 mt-0 ">GAME TO PLAY</h1>
+              </Zoom>
             </div>
             <div className="d-block d-md-none my-4">
-              <h1 className="sm-fs-0 mb-0 ">BEST ONLINE</h1>
-              <h1 className="sm-fs-0 mt-0 ">GAME TO PLAY</h1>
+              <Zoom cascade>
+                <h1 className="sm-fs-0 mb-0 ">BEST ONLINE</h1>
+                <h1 className="sm-fs-0 mt-0 ">GAME TO PLAY</h1>
+              </Zoom>
             </div>
-            <p className="fs-5 mb-4">
-              Live gaming with lots of other games. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
-            <Button variant="outline-info" className="mb-4 px-3 fs-6 fw-semibold">
-              PLAY NOW
-            </Button>
+            <Fade cascade>
+              <p className="fs-5 mb-4">
+                Live gaming with lots of other games. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              </p>
+            </Fade>
+            <Slide>
+              <Button variant="outline-info" className="mb-4 px-3 fs-6 fw-semibold">
+                PLAY NOW
+              </Button>
+            </Slide>
           </Col>
         </Row>
       </Container>

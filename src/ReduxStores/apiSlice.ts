@@ -7,8 +7,6 @@ import { Creator } from "../models/creator.model";
 import { GameInfo } from "../models/gameInfo.model";
 import { StoreDetail } from "../models/storeDetail.model";
 
-// https://api.rawg.io/api/games/3498?key=2f7b169ad3574b86bc34505e89cf9187
-
 interface Games {
   results: Game[];
   next: string | null;

@@ -7,6 +7,7 @@ import DynamicGame from "../../Common/DynamicGame/DynamicGame";
 import { useGetGamesByGenreQuery, useGetGenreQuery } from "../../../ReduxStores/apiSlice";
 import Spinner from "../../Common/Spinner/Spinner";
 import { Genre } from "../../../models/genre.model";
+import { JackInTheBox } from "react-awesome-reveal";
 
 const TopGenres = () => {
   // Sidebar
@@ -26,9 +27,11 @@ const TopGenres = () => {
 
   return (
     <section className="text-white container-fluid my-5">
-      <h1 className="text-center fw-bold ">
-        TOP <span className="text-pink">GENRES</span>
-      </h1>
+      <JackInTheBox>
+        <h1 className="text-center fw-bold ">
+          TOP <span className="text-pink">GENRES</span>
+        </h1>
+      </JackInTheBox>
       <UnderLine></UnderLine>
       <Row className="g-3 mt-3">
         <Col xs={1} md={2} className="d-flex align-items-stretch">
