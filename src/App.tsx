@@ -11,8 +11,19 @@ import Footer from "./Components/Common/Footer/Footer";
 import GameInfo from "./Components/Common/GameInfo/GameInfo";
 import StoreDetails from "./Components/Common/StoreDetails/StoreDetails";
 import ScrollToTop from "react-scroll-to-top";
+import { useEffect, useState } from "react";
+import FullPageLoading from "./Components/Common/FullPageLoading/FullPageLoading";
 
 function App() {
+  // Full page loading
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3300);
+  }, []);
+  if (loading) {
+    return <FullPageLoading></FullPageLoading>;
+  }
+
   return (
     <>
       <ScrollToTop smooth top={500} />
