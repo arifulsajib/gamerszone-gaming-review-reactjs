@@ -89,7 +89,7 @@ const GameInfo = () => {
             </TabPanel>
             <TabPanel>
               <h6 className="fw-bold my-4">Available Stores</h6>
-              <Row xs={1} md={2} lg={3} className="g-4">
+              <Row xs={1} md={2} lg={3} className="g-4 overflow-hidden">
                 {data?.stores.map((store) => (
                   <Col key={store?.store?.id}>
                     <Row xs={2} className="g-3">

@@ -41,7 +41,7 @@ const TopGenres = () => {
 
           <div className="d-flex align-items-center">
             <Offcanvas show={show} onHide={handleClose} responsive="lg">
-              <Offcanvas.Header className="bg-blue text-white " closeButton>
+              <Offcanvas.Header className="bg-blue text-white " closeButton closeVariant="white">
                 <Offcanvas.Title className="mx-auto fs-2">Genres</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="bg-blue d-flex align-items-center">
