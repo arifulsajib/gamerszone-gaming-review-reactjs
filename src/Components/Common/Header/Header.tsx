@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../assets/logo.png";
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
+import { BsRssFill, BsSteam, BsTwitch, BsYoutube } from "react-icons/bs";
 
 const Header = () => {
   return (
@@ -29,8 +30,19 @@ const Header = () => {
                 Games
               </Nav.Link>
             </Nav>
-            <Nav.Link as={HashLink} className="text-white me-3 fw-semibold fs-5" smooth to="#footer">
-              Content
+            <Nav.Link as={HashLink} className="text-white me-3 fw-semibold fs-5" smooth to="#banner">
+              <span className="me-3">
+                <BsRssFill></BsRssFill>
+              </span>
+              <span className="me-3">
+                <BsSteam></BsSteam>
+              </span>
+              <span className="me-3">
+                <BsTwitch></BsTwitch>
+              </span>
+              <span className="me-3">
+                <BsYoutube></BsYoutube>
+              </span>
             </Nav.Link>
           </Navbar.Collapse>
         </Container>

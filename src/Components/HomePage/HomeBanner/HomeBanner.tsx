@@ -4,6 +4,7 @@ import bannerImg from "../../../assets/banner.png";
 const HomeBanner = () => {
   return (
     <section
+      id="banner"
       className="text-white pt-5 mt-5"
       style={{
         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${bannerImg}) center/cover no-repeat`,

@@ -5,7 +5,11 @@
 Users will able to:
 
 - View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
+- See a huge number of games, their rating and all details
+- Filter games based on Genre
+- See availabe stores
+- See the Creators
+- All datas are paginated and more
 
 ### Links
 
@@ -17,7 +21,11 @@ Users will able to:
 - React
 - Redux-toolkit
 - RTK query
-- bootstrap
+- TypeScript
+- Rawg Api
+- React-bootstrap
+- React Router
+- React Icons
 
 ## Developer profile
 

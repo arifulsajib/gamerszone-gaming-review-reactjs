@@ -74,7 +74,7 @@ const GameInfo = () => {
 
             <TabPanel>
               <h6 className="fw-bold my-4">Game Description</h6>
-              <div className="para-text" dangerouslySetInnerHTML={{ __html: data?.description }}></div>
+              <div className="para-text" dangerouslySetInnerHTML={{ __html: typeof data?.description === "string" ? data?.description : "" }}></div>
             </TabPanel>
             <TabPanel>
               <h6 className="fw-bold my-4">Game Platforms</h6>

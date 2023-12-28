@@ -9,6 +9,7 @@ import GamesPage from "./Pages/GamesPage/GamesPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import Footer from "./Components/Common/Footer/Footer";
 import GameInfo from "./Components/Common/GameInfo/GameInfo";
+import StoreDetails from "./Components/Common/StoreDetails/StoreDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/games" element={<GamesPage></GamesPage>}></Route>
           <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
           <Route path="/games/:id" element={<GameInfo></GameInfo>}></Route>
+          <Route path="/stores/:id" element={<StoreDetails></StoreDetails>}></Route>
         </Routes>
         <Footer></Footer>
       </Router>

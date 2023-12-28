@@ -14,7 +14,7 @@ const CreatorsPage = () => {
 
   return (
     <section
-      className="text-white container"
+      className="text-white container overflow-hidden"
       style={{
         minHeight: "450px"
       }}
